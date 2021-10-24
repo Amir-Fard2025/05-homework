@@ -44,6 +44,10 @@ $(document).ready(function () {
     var tableSchedule = $(this).siblings(".decription").val();
     var buttonId = $(this).attr("id");
     localStorage.setItem(buttonId, tableSchedule);
+    $("#message").css("display", "block");
+    setTimeout(() => {
+      $("#message").css("display", "none");
+    }, 5000);
   });
   // Get the local storage back to description
   $("#btn-1").siblings(".decription").text(localStorage.getItem("btn-1"));
